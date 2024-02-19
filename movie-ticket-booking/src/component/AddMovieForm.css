@@ -1,0 +1,45 @@
+.container-movie-form {
+    /* background-image: url('C:\Users\rajal\Desktop\FullStackProject\movie-ticket-booking\src\images\Movie_bg.jpg'); */
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-left: 0%;
+    
+  }
+  .form1{
+    width: 1000px;
+    height: 1000px;
+  }
+  .movie-form {
+    margin-bottom: 20px;
+  }
+  
+  .movie-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .movie-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 50%;
+  }
+  
+  .movie-button {
+    padding: 10px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .movie-button:hover {
+    background-color: #d22222;
+  }
+  
