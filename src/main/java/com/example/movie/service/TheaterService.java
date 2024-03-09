@@ -1,12 +1,13 @@
 package com.example.movie.service;
-import java.util.List;
-import java.util.Optional;
 
 import com.example.movie.model.Theater;
 import com.example.movie.repository.TheaterRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TheaterService {
@@ -55,5 +56,9 @@ public class TheaterService {
             throw new EntityNotFoundException("Theater not found with id: " + id);
         }
     }
+
+//    public List<Long> getAllTheaterIds() {
+//        return theaterRepository.findAllIds(); // Example method in repository to fetch IDs
+//    }
 
 }

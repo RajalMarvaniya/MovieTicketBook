@@ -28,6 +28,15 @@ public class Movie {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public Theater getTheater() {
+        return theater;
+    }
+
+    public void setTheater(Theater theater) {
+        this.theater = theater;
+    }
+
     public Theater getTheatre() {
         return theater;
     }
@@ -52,5 +61,6 @@ public class Movie {
     public void setReleaseDate(LocalDate releaseDate) {
         this.releaseDate = releaseDate;
     }
+
 
 }

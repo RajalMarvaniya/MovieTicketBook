@@ -1,10 +1,13 @@
 package com.example.movie.controller;
+
 import com.example.movie.model.Theater;
+import com.example.movie.repository.TheaterRepository;
 import com.example.movie.service.TheaterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
@@ -13,7 +16,7 @@ public class TheaterController {
 
     @Autowired
     private TheaterService theaterService;
-
+    private TheaterRepository theaterRepository;
     // Get all theaters
     @GetMapping("/theaters")
     public ResponseEntity<List<Theater>> getAllTheaters() {
@@ -43,6 +46,7 @@ public class TheaterController {
         Theater createdTheater = theaterService.createTheater(theater);
         return new ResponseEntity<>(createdTheater, HttpStatus.CREATED);
     }
+
     // Update a theater
     @PutMapping("/theaters/{id}")
     public ResponseEntity<Theater> updateTheater(@PathVariable("id") Long id, @RequestBody Theater theaterData) {
@@ -60,4 +64,14 @@ public class TheaterController {
         theaterService.deleteTheater(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+    // Controller method to fetch all theater IDs
+//    @GetMapping("/theaterIds")
+//    public ResponseEntity<List<Long>> getAllTheaterIds() {
+//        List<Long> theaterIds = theaterService.getAllTheaterIds();
+//        return ResponseEntity.ok().body(theaterIds);
+//    }
+
+
+
 }
