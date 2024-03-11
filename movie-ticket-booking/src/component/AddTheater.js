@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import './AddTheater.css';
 import axios from 'axios';
 import Navbar from './Navbar';
-
+import { useNavigate } from 'react-router-dom';
 const AddTheater = () => {
   const [name, setName] = useState('');
   const [location, setLocation] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-
+  const navigate = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
     
@@ -21,7 +21,8 @@ const AddTheater = () => {
       const response = await axios.post("http://localhost:8080/addTheater", theaterData);
       
       if (response.status === 201) {
-        console.log('Theater added successfully!');
+        alert('Theater added successfully!');
+        navigate('/maincontent');
         // Optionally, you can redirect the user to another page or show a success message.
       } else {
         console.error('Failed to add theater.');

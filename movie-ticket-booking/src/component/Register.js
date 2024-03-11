@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios'; // Import Axios
 import './Register.css'; // Import CSS file
-
+import { useNavigate } from 'react-router-dom';
 function Register() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [password, setPassword] = useState('');
-
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     
@@ -23,6 +23,7 @@ function Register() {
     axios.post('http://localhost:8080/register', user)
       .then(response => {
         alert("REgistered successfully.")
+        navigate('/movie');
         // Optionally, you can redirect the user to another page or show a success message
       })
       .catch(error => {

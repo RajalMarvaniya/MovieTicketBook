@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './AddMovieForm.css';
 import Navbar from './Navbar';
-
+import { useNavigate } from 'react-router-dom';
 const AddMovieForm = () => {
   const [movieData, setMovieData] = useState({
     title: '',
@@ -12,7 +12,7 @@ const AddMovieForm = () => {
   });
 
   const [theaters, setTheaters] = useState([]);
-
+  const navigate = useNavigate();
   useEffect(() => {
     fetchTheaters();
   }, []);
@@ -42,13 +42,15 @@ const AddMovieForm = () => {
 
     axios.post('http://localhost:8080/addmovie', formattedMovieData)
       .then(response => {
-        console.log('Movie added successfully');
+        alert('Movie added successfully');
+        navigate('/showmovie');
         setMovieData({
           title: '',
           description: '',
           theater: '',
           releaseDate: ''
         });
+        
       })
       .catch(error => {
         console.error('There was a problem with your Axios request:', error);
