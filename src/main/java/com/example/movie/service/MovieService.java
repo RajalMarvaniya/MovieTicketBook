@@ -46,4 +46,7 @@ public class MovieService {
         return movies;
     }
 
+    public List<Movie> getMoviesByTheaterId(Long theaterId) {
+        return movieRepository.findByTheaterId(theaterId);
+    }
 }
