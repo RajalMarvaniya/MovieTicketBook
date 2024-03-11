@@ -1,0 +1,40 @@
+.body1 {
+     background-color: black;
+     height: 1000px;
+}
+
+.Theater{
+    position: fixed;
+    background: #d22222;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 12;
+    text-align: center;
+    color: white;
+}
+
+/* Style for the theater page */
+.theater-page {
+    padding: 20px;
+}
+
+/* Style for the row containing the movie cards */
+.movie-card-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: l; 
+}
+
+/* Style for the movie card columns */
+.movie-card-column {
+    padding: 10px; /* Padding between movie cards */
+    flex: 0 0 calc(25% - 20px); /* Four cards per column, accounting for padding */
+    max-width: calc(25% - 20px);
+}
+
+/* Style for the movie title */
+.movie-title {
+    padding: 10px;
+    text-align: center;
+}
+

@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.css';
+// import backgroundImage from '../images/index.jpg';
 
 
 const Index = () => {

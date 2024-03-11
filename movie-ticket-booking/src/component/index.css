@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins',sans-serif;
-  background-image: url('C:\Users\rajal\Desktop\FullStackProject\movie-ticket-booking\src\images\index.jpg');
+  background-image: url('../images/index.jpg');
 }
 ::selection{
   color: #000;

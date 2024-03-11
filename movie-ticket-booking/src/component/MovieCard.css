@@ -1,0 +1,20 @@
+.card {
+    width: 300px; /* Adjust width as needed */
+    margin: 20px;
+    border: 2px solid white; /* Border color for the card */
+    border-radius: 5px; /* Make the border circular */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-title{
+    font-size: 20px;
+    color: white;
+
+}

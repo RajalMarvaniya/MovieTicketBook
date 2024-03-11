@@ -1,0 +1,37 @@
+.congrats {
+    text-align: center;
+    font-size: 2em;
+    color: #ffffff;
+    background-color: #d22222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation-name: slidein;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    width: 2000px;
+    height: 300px;
+  } 
+  .congrats h1{
+    color: #ffffff;
+    margin-top: 80px;
+    margin-left: -550px;
+  }
+
+  .congrats p{
+    color: #ffffff;
+    margin-top: 20px;
+    margin-left: -550px;
+  }
+  
+  @keyframes slidein {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  

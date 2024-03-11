@@ -1,0 +1,26 @@
+/* AddTheaterComponent.css */
+.container2 {
+     margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+  background-image: url('../images/index.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .mb-4{
+    margin-left: 180px;
+    margin-top: -5px;
+  }
+  .form2{
+    align-items: center;
+    width: 800px;
+    height: 280px;
+  }
+  
+ 

@@ -6,6 +6,7 @@ function Register() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,7 +15,8 @@ function Register() {
     const user = {
       username: username,
       email: email,
-      phoneNumber: phoneNumber
+      phoneNumber: phoneNumber,
+      password: password
     };
 
     // Make POST request to backend endpoint using Axios
@@ -38,6 +40,9 @@ function Register() {
 
         <label><b>Email</b></label>
         <input type="text" name="email" required onChange={(e) => setEmail(e.target.value)} />
+
+        <label><b>Password</b></label>
+        <input type="text" name="password" required onChange={(e) => setPassword(e.target.value)} />
 
         <label><b>Phone Number</b></label>
         <input type="text" name="phoneNumber" required onChange={(e) => setPhoneNumber(e.target.value)} />
