@@ -3,12 +3,12 @@ import './MainContent.css';
 import Navbar from './Navbar';
 import axios from 'axios';
 import UpdateT from './UpdateT';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
+import { useNavigate } from 'react-router-dom'; 
 
 const MainContent = () => {
     const [theaters, setTheaters] = useState([]);
     const [selectedTheater, setSelectedTheater] = useState(null); // State to store selected theater for editing
-    const navigate = useNavigate(); // Initialize useNavigate hook
+    const navigate = useNavigate(); 
 
     useEffect(() => {
         // Fetch theaters from the backend API
@@ -27,15 +27,15 @@ const MainContent = () => {
             .then(response => {
                 // Remove deleted theater from the list of theaters
                 setTheaters(theaters.filter(theater => theater.id !== id));
-                console.log('Theater deleted successfully.');
+                alert('Theater deleted successfully.');
             })
             .catch(error => {
-                console.error('Error deleting theater:', error);
+                alert('Error deleting theater:', error);
             });
     };
 
     const handleEditTheater = (theater) => {
-        // Navigate to the update page with the selected theater's data
+        // Navigate to the update page with the selected theater data
         navigate('/updatet', { state: { theater: theater } });
     };
 
